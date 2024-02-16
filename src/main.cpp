@@ -10,6 +10,9 @@ PS2Keyboard keyboard;
 
 uint8_t baby_letter = 0;
 uint8_t num_aaas = 1;
+
+const uint8_t min_a = 2;
+const uint8_t max_a = 10;
 uint8_t letter_a = 0;
 
 void speak_baby();
@@ -32,7 +35,7 @@ void speak_baby(){
 		case 0:
 			Serial.print('w');
 			baby_letter++;
-			num_aaas = random(3, 10);
+			num_aaas = random(min_a, max_a);
 			break;
 		case 1:
 			Serial.print('a');
